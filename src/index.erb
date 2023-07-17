@@ -11,7 +11,7 @@ layout: default
       Technology Solutions
     </h1>
     <div class="w-40 h-2 !mt-6 mx-auto skew-x-[-40deg] bg-primary-500"></div>
-    <p class="!mb-20 text-lg text-center text-slate-500">
+    <p class="!mb-10 md:!mb-20 text-lg text-center text-slate-500">
       Delivering essential web solutions for efficient business operations.
     </p>
     <ul class="grid gap-x-20 gap-y-10 md:grid-cols-2">
@@ -39,10 +39,10 @@ layout: default
     Contact us
   </h3>
   <div class="!mt-6 w-40 h-2 mx-auto skew-x-[-40deg] bg-primary-500"></div>
-  <p class="text-lg text-center text-slate-500">
+  <p class="!mb-10 md:!mb-20 text-lg text-center text-slate-500">
     If you're interested in our solutions, fill out the form below and we'll get back to you soon.
   </p>
-  <form netlify method="POST" action="/?success=true" name="contact" class="grid grid-cols-1 py-4 gap-x-8 gap-y-6 sm:grid-cols-2">
+  <form netlify method="POST" action="/?success=true" name="contact" class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
     <%= render Form::InputComponent.new(name: 'name', label: 'First Name') %>
     <%= render Form::InputComponent.new(name: 'name', label: 'Last Name') %>
     <div class="sm:col-span-2">
