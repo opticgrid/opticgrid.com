@@ -2,6 +2,9 @@
 permalink: /index.html
 layout: default
 ---
+<div id="success-message" class=" transition-opacity absolute bg-slate-700 duration-500 py-4 px-8 text-slate-100 font-medium shadow-md rounded-md hidden shadow-slate-600 left-[50%] translate-x-[-50%] top-[120px]">
+  Your message has been sent. We'll get back to you soon!
+</div>
 <div class="bg-slate-100">
   <div class="container max-w-4xl p-8 mx-auto space-y-8 md:px-8 md:py-14">
     <h1 class="text-4xl font-semibold text-center text-slate-950">
@@ -39,7 +42,7 @@ layout: default
   <p class="text-lg text-center text-slate-500">
     If you're interested in our solutions, fill out the form below and we'll get back to you soon.
   </p>
-  <form netlify name="contact" class="grid grid-cols-1 py-4 gap-x-8 gap-y-6 sm:grid-cols-2">
+  <form netlify method="POST" action="/?success=true" name="contact" class="grid grid-cols-1 py-4 gap-x-8 gap-y-6 sm:grid-cols-2">
     <%= render Form::InputComponent.new(name: 'name', label: 'First Name') %>
     <%= render Form::InputComponent.new(name: 'name', label: 'Last Name') %>
     <div class="sm:col-span-2">
