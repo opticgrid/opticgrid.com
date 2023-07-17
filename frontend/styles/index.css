@@ -1,0 +1,27 @@
+/* If you need to add @import statements, do so up here */
+
+@import "jit-refresh.css"; /* triggers frontend rebuilds */
+
+/* Set up Tailwind imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-link {
+  @apply text-primary-600  underline-offset-2 hover:underline hover:text-primary-500
+    transition-all duration-200;
+}
+
+.btn {
+  @apply py-2 leading-7 px-4 rounded-md font-semibold
+    transition duration-200 cursor-pointer border border-transparent
+    shadow-sm focus:outline-none focus:ring-2 ring-offset-2;
+}
+
+.btn-primary {
+  @apply bg-primary-500 hover:bg-primary-600 text-white focus:ring-primary-500
+}
+
+.btn-secondary {
+  @apply bg-slate-200 hover:bg-slate-300 text-slate-500;
+}

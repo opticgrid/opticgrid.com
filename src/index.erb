@@ -1,0 +1,53 @@
+---
+permalink: /index.html
+layout: default
+---
+<div class="bg-slate-100">
+  <div class="container max-w-4xl p-8 mx-auto space-y-8 md:px-8 md:py-14">
+    <h1 class="text-4xl font-semibold text-center text-slate-950">
+      Technology Solutions
+    </h1>
+    <div class="w-40 h-2 !mt-6 mx-auto skew-x-[-40deg] bg-primary-500"></div>
+    <p class="!mb-20 text-lg text-center text-slate-500">
+      Delivering essential web solutions for efficient business operations.
+    </p>
+    <ul class="grid gap-x-20 gap-y-10 md:grid-cols-2">
+      <%= render SolutionComponent.new(
+        name: 'Google Workspace',
+        icon: 'inbox-stack',
+        description: %Q(
+          Experience the convenience of an all-in-one solution that seamlessly
+          integrates everything your team needs to successfully run
+          your business.
+      )) %>
+      <%= render SolutionComponent.new(
+        name: 'Servers & Infrastructure',
+        icon: 'server-stack',
+        description: %Q(
+          Unmanaged dedicated servers, virtual private servers, private domain
+          registrations, static website hosting and more.
+      )) %>
+    </ul>
+  </div>
+</div>
+<div class="border-b"></div>
+<div class="container max-w-xl p-8 mx-auto space-y-8 md:px-0 md:py-14">
+  <h3 class="text-4xl font-semibold text-center text-slate-950">
+    Contact us
+  </h3>
+  <div class="!mt-6 w-40 h-2 mx-auto skew-x-[-40deg] bg-primary-500"></div>
+  <p class="text-lg text-center text-slate-500">
+    If you're interested in our solutions, fill out the form below and we'll get back to you soon.
+  </p>
+  <form netlify name="contact" class="grid grid-cols-1 py-4 gap-x-8 gap-y-6 sm:grid-cols-2">
+    <%= render Form::InputComponent.new(name: 'name', label: 'First Name') %>
+    <%= render Form::InputComponent.new(name: 'name', label: 'Last Name') %>
+    <div class="sm:col-span-2">
+      <%= render Form::InputComponent.new(name: 'email', label: 'Email', type: 'email') %>
+    </div>
+    <div class="sm:col-span-2">
+      <%= render Form::TextareaComponent.new(name: 'message', label: 'Message') %>
+    </div>
+    <button type="submit" class="sm:col-span-2 btn btn-primary">Send message</button>
+  </form>
+</div>
